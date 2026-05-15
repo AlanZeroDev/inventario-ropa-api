@@ -15,5 +15,10 @@ class producto(BaseModel):
     precio_venta:float
     cantidad_vendida:int
 
+#Mostrar productos
+
+app.get("/productos")
+def obtener_productos():
+    return productos
 
 
