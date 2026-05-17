@@ -47,3 +47,27 @@ Este proyecto está en desarrollo activo. A futuro planeo:
 - [ ] Agregar autenticación de usuarios
 - [ ] Construir un frontend con **React**
 - [ ] Deployar como aplicación **full stack** completa
+
+### Agregar un producto
+![Agregar producto](docs/agregar_producto.jpeg)
+
+### Verificamos la lista
+![Lista de productos](docs/mostrar_lista1.jpeg)
+
+### Agregamos un segundo producto
+![Agregar producto 2](docs/agregar_producto2.jpeg)
+
+### Verificamos la lista actualizada
+![Lista actualizada](docs/mostrar_lista2.jpeg)
+
+### Modificamos un producto por ID
+![Modificar producto](docs/modificar_id.jpeg)
+
+### Verificamos la modificación
+![Lista tras modificación](docs/mostrar_lista3.jpeg)
+
+### Buscamos un producto por ID
+![Buscar por ID](docs/buscar_id.jpeg)
+
+### Demostración final
+![Demostración final](docs/demostracion_productos.jpeg)
