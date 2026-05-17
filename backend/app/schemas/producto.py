@@ -6,4 +6,3 @@ class Producto(BaseModel):
     precio: float
     precio_compra: float
     precio_venta: float
-    cantidad_vendida: int
