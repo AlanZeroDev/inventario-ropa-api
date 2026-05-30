@@ -6,7 +6,8 @@ from backend.app.services.producto_service import (
     busqueda_id, 
     modificar,
     busqueda_descripcion,
-    eliminar
+    eliminar,
+    agregar_stock
 )
 
 router = APIRouter()
@@ -34,3 +35,8 @@ def route_modificar(producto_actualizado: Producto, id: int):
 @router.delete("/productos/{id}")
 def route_eliminar(id: int):
     return eliminar(id)
+
+
+@router.patch("/producto/{id}/agregar")
+def route_agregar(cantidad:int , id:int):
+    return agregar_stock(cantidad,id)
