@@ -41,3 +41,13 @@ def eliminar(id:int):
             productos.remove(producto)
             return "producto eliminado"
     return "id no existe"
+
+def agregar_stock(cantidad:int , id : int):
+    if cantidad > 0:
+        for producto in productos:
+            if producto["id"] == id:
+                stock_actual = producto["cantidad"]
+                producto["cantidad"] = stock_actual + cantidad
+                return producto
+        return "id no encontrado"
+    return "cantidad a agregar debe ser mayor a 0"  
