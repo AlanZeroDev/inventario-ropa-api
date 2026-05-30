@@ -51,3 +51,16 @@ def agregar_stock(cantidad:int , id : int):
                 return producto
         return "id no encontrado"
     return "cantidad a agregar debe ser mayor a 0"  
+
+def eliminar_stock(cantidad_eliminar:int , id:int):
+    if cantidad_eliminar <= 0:
+        return "La cantidad a eliminar debe ser mayor a 0"
+    
+    for producto in productos:
+        if producto["id"]==id:
+            if producto["cantidad"] < cantidad_eliminar: 
+                return "Cantidad excede stock"
+            stock_actual = producto["cantidad"]
+            producto["cantidad"] = stock_actual - cantidad_eliminar
+            return producto
+        return "id no encontrado"
