@@ -4,7 +4,9 @@ from backend.app.services.producto_service import (
     obtener_productos, 
     agregar_producto, 
     busqueda_id, 
-    modificar
+    modificar,
+    busqueda_descripcion,
+    eliminar
 )
 
 router = APIRouter()
@@ -17,10 +19,18 @@ def route_obtener_productos():
 def route_agregar_producto(producto: Producto):
     return agregar_producto(producto)
 
-@router.get("/productos/{id}")    
+@router.get("/productos/id/{id}")    
 def route_busqueda_id(id: int):   
     return busqueda_id(id)
+
+@router.get("/productos/descripcion/{info}")
+def route_busqueda_descripcion(info: str):
+    return busqueda_descripcion(info)
 
 @router.put("/productos/{id}")    
 def route_modificar(producto_actualizado: Producto, id: int):
     return modificar(producto_actualizado, id)
+
+@router.delete("/productos/{id}")
+def route_eliminar(id: int):
+    return eliminar(id)

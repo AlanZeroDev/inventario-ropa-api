@@ -12,11 +12,17 @@ def agregar_producto(producto:Producto):
     productos.append(nuevo)
     return "producto agregado"
 
-def busqueda_especifica(id:int):
+def busqueda_id(id:int):
     for producto in productos:
         if producto["id"] == id :
             return producto
-    return "No existe el estudiante"
+    return "No existe el id"
+
+def busqueda_descripcion(dato:str):
+    for producto in productos:
+        if producto["descripcion"] == dato:
+            return producto
+    return "No existe la descripcion"
 
 def modificar(producto_actualizado: Producto, id: int):
     for producto in productos:
@@ -28,3 +34,10 @@ def modificar(producto_actualizado: Producto, id: int):
             producto["precio_venta"] = producto_actualizado.precio_venta
             return "producto modificado"
     return "no existe el producto"
+
+def eliminar(id:int):
+    for producto in productos:
+        if producto["id"] == id:
+            productos.remove(producto)
+            return "producto eliminado"
+    return "id no existe"
