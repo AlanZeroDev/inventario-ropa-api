@@ -3,7 +3,7 @@ from backend.app.schemas.producto import Producto
 from backend.app.services.producto_service import (
     obtener_productos, 
     agregar_producto, 
-    busqueda_especifica, 
+    busqueda_id, 
     modificar
 )
 
@@ -19,7 +19,7 @@ def route_agregar_producto(producto: Producto):
 
 @router.get("/productos/{id}")    
 def route_busqueda_id(id: int):   
-    return busqueda_especifica(id)
+    return busqueda_id(id)
 
 @router.put("/productos/{id}")    
 def route_modificar(producto_actualizado: Producto, id: int):
