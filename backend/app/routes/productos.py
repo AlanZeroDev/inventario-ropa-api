@@ -18,7 +18,7 @@ def route_agregar_producto(producto: Producto):
     return agregar_producto(producto)
 
 @router.get("/productos/{id}")    
-def route_busqueda_especifica(id: int):   
+def route_busqueda_id(id: int):   
     return busqueda_especifica(id)
 
 @router.put("/productos/{id}")    
